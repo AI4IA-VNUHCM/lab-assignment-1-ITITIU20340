@@ -24,6 +24,27 @@ int main(int argc, char *argv[]) {
 	int height = atoi(argv[1]);
 	int border = atoi(argv[2]);
 	//Your codes here
+	for (int row = 0; row < height; row++)
+	{
+		for (int column = 0; column < height * 2; column++)
+		{
+			if (row >= border && row <= height - 1 - border)
+			{
+				if ((column < height - 1 - row || column > height - 2 - row + border) && (column < height + row - border || column > height - 1 + row))
+					printf(" ");
+				else
+					printf("*");
+			}
+			else
+			{
+				if (column < height - 1 - row || column > height - 1 + row)
+					printf(" ");
+				else
+					printf("*");
+			}
+		}
+		printf("\n");
+	}
 	
 	return 0;
 }
