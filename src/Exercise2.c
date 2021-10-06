@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
     int Minvalue = testcase[0];
 	int Maxvalue = testcase[0];
 	for (int i = 0; i < argc; i++){
-		if(Minxvalue >= testcase[i]){
+		if(Minvalue >= testcase[i]){
 			Minvalue = testcase[i];
 		}
 		if(Maxvalue <= testcase[i]){
